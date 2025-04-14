@@ -1,13 +1,13 @@
 class Solution {
   bool containsDuplicate(List<int> nums) {
-    Map<int, String> sol = {};
+    final sol = <int>{};
 
     for(int number in nums){
-      if(sol[number] != null){
-        return true;
-      }
+        if(sol.contains(number)){
+            return true;
+        }
 
-      sol[number] = "";
+        sol.add(number);
     }
 
     return false;
